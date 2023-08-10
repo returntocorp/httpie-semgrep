@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "httpie-semgrep"
+version = "0.1.0"
+description = "Semgrep auth for httpie"
+authors = ["Tom Petr <tom@semgrep.com>"]
+readme = "README.md"
+packages = [{include = "httpie_semgrep"}]
+
+[tool.poetry.plugins."httpie.plugins.auth.v1"]
+"httpie_semgrep" = "httpie_semgrep:SemgrepAuthPlugin"
+
+[tool.poetry.scripts]
+shttp = "httpie_semgrep:main"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+httpie = "^3.2.2"
+requests = "^2.31.0"
+pyyaml = "^6.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

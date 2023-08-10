@@ -1,0 +1,21 @@
+target-version = "py311"
+select = [
+  "B",
+  "C4",
+  "E7", "E9",
+  "EXE",
+  "I",
+  "ICN",
+  "W",
+  "F",
+  "PT",
+  "RUF",
+  "SIM",
+  "UP",
+]
+ignore = [
+    "E501"  # Line too long
+]
+
+[isort]
+force-single-line = true
